@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Random Repository Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="name">
+    <div class="black-box"></div>
+    <h1 class="title">GitHub Repository Finder</h1>
+  </div>
+  <div class="dropdown">
+    <div class="drop-btn" id="dropBtn">
+      <button class="drop-btn-text" id="dropBtnText">Select a Language</button>
+      <span>v</span>
+    </div>
+    <div class="dropdown-content" id="dropdownContent"></div>
+  </div>
+  <div class="select-prompt" id="selectPrompt">Please select a language</div>
+  <div class="loading-prompt hidden" id="loadingPrompt">Loading, please wait..</div>
+  <div class="error-prompt hidden" id="errorPrompt">Error fetching repositories</div>
+  <div class="result hidden" id="result">
+    <div class="result-name" id="resultName">####</div>
+    <div class="result-desc" id="resultDesc">####</div>
+    <div class="result-info" id="resultInfo">
+      <div class="lang">
+        <div class="lang-circle" id="langCircle"></div>
+        <div class="result-lang" id="resultLang">####</div>
+      </div>
+      <div class="stars">
+        <img src="./feed-star-16.svg" alt="GitHub star icon">
+        <div class="result-stars" id="resultStars">####</div>
+      </div>
+      <div class="forked">
+        <img src="./feed-forked-16.svg" alt="GitHub feed icon">
+        <div class="result-forks" id="resultForks">####</div>
+      </div>
+      <div class="issues">
+        <img src="./feed-issue-open-16.svg" alt="GitHub issue icon">
+        <div class="result-issues" id="resultIssues">####</div>
+      </div>
+    </div>
+  </div>
+  <button class="refresh-btn hidden" id="refreshBtn">
+    Refresh
+  </button>
+  <button class="error-btn hidden" id="errorBtn">
+    Click to retry
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
